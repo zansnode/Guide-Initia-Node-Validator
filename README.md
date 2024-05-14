@@ -144,7 +144,7 @@ after created validator, Dont forget to save your priv_validator_key.json its on
 
 ### Validator Info
 ```
-initiad q staking validator $(initiad keys show $WALLET --bech val -a)
+initiad tx mstaking validator $(initiad keys show $WALLET --bech val -a)
 ```
 
 ### Faucet 
@@ -152,7 +152,7 @@ https://faucet.testnet.initia.xyz/
 
 ### Delegate Token To Your Validator
 ```
-initiad tx staking delegate $(initiad keys show wallet --bech val -a) 1000000uinit --from wallet -y
+initiad tx mstaking delegate Your_Valoper 1000000uinit --from Name_Your_Wallet --gas=2000000 --fees=300000uinit --chain-id initiation-1 -y 
 ```
 
 ### Unjail
