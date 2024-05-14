@@ -142,6 +142,11 @@ initiad tx mstaking create-validator \
 ```
 after created validator, Dont forget to save your priv_validator_key.json its only way to recover your validator 
 
+### Validator Info
+```
+initiad q staking validator $(initiad keys show $WALLET --bech val -a)
+```
+
 ### Faucet 
 https://faucet.testnet.initia.xyz/
 
