@@ -123,22 +123,29 @@ initiad q bank balances $(initiad keys show wallet -a)
 ### Node Info
 before Create Validator, you have to make sure that blocks have syncs. use command below to check.
 ```
-initiad status 2>&1 | jq .SyncInfo
+initiad status 2>&1 | jq
 ```
 If it shows false, the sign is that you can create a validator
 
 ### Create Validator
 ```
 initiad tx mstaking create-validator \
-    --amount=5000000uinit \
-    --pubkey=$(initiad tendermint show-validator) \
-    --moniker="(Your-Moniker)" \
-    --chain-id=initiation-1 \
-    --from=(Name-of-Your-wallet) \
-    --commission-rate="0.10" \
-    --commission-max-rate="0.20" \
-    --commission-max-change-rate="0.01" \
-    --identity=(Your-Keybase-id)
+  --amount=9000000uinit \
+  --pubkey=$(initiad tendermint show-validator) \
+  --moniker=(Your-name) \
+  --chain-id=initiation-1 \
+  --commission-rate=0.05 \
+  --commission-max-rate=0.20 \
+  --commission-max-change-rate=0.05 \
+  --from=(Name-Your-Wallet) \
+  --identity="(Keybase-id)" \
+  --website="(Your-website)" \
+  --details="-" \
+  --node=http://localhost:15657 \
+  --gas-adjustment 1.4 \
+  --gas auto \
+  --gas-prices 0.15uinit \
+  -y
 ```
 after created validator, Dont forget to save your priv_validator_key.json its only way to recover your validator 
 
