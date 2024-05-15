@@ -24,7 +24,7 @@ go version
 ```
 git clone https://github.com/initia-labs/initia
 cd initia
-git checkout v0.2.11
+git checkout v0.2.14
 make install
 ```
 
