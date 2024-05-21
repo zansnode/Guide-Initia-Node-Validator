@@ -146,7 +146,7 @@ after created validator, Dont forget to save your priv_validator_key.json its on
 
 ### Validator Info
 ```
-initiad tx mstaking validator $(initiad keys show $WALLET --bech val -a)
+initiad q mstaking validator $(initiad keys show $WALLET --bech val -a)
 ```
 
 ### Faucet 
